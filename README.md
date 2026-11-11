@@ -1,32 +1,31 @@
-# 🛡️ SIGAP — Sistem Informasi Gawat Darurat dan Antisipasi Penanggulangan
+<p align="center">
+  <img src="web/static/sigap-title.svg" alt="SIGAP — Sistem Informasi Gawat Darurat dan Antisipasi Penanggulangan" width="100%" />
+</p>
 
-**SIGAP** adalah aplikasi web chatbot edukasi kesiapsiagaan bencana berbasis aturan (*rule-based*) yang berjalan penuh di komputer lokal menggunakan **Python + Flask**, **MySQL/MariaDB dari XAMPP**, dan **HTML/CSS/JavaScript polos** (tanpa dependensi internet atau LLM).
+**SIGAP** adalah aplikasi web chatbot edukasi kesiapsiagaan bencana berbasis aturan (*rule-based*) yang berjalan penuh di komputer lokal menggunakan **Python + Flask**, **MySQL/MariaDB dari XAMPP**, dan **HTML/CSS/JavaScript** (tanpa dependensi internet atau LLM).
 
 Seluruh panduan kebencanaan merujuk pada sumber resmi **BNPB**, **BMKG**, dan **PVMBG** untuk menjawab tiga pertanyaan inti kebencanaan (**Sebelum**, **Saat**, dan **Sesudah** bencana) pada **Gempa Bumi**, **Banjir**, dan **Tanah Longsor** (serta Tsunami, Gunung Api, Angin Kencang, Tas Siaga, Jalur Evakuasi, Kelompok Rentan, Glosarium Istilah, Mitos vs Fakta, dan Kontak Darurat **112/115**).
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-1. **Deteksi Darurat Prioritas Tertinggi (P0):** Mendeteksi kalimat kondisi darurat aktif (*"tolong terjebak banjir"*, *"ada yang tertimbun longsor"*, *"sos"*) sebelum skoring intent biasa dan langsung menampilkan panduan penyelamatan ringkas beserta tombol panggilan cepat **112 / 115**.
+1. **Deteksi Darurat Prioritas Tertinggi (P0):** Mendeteksi kalimat kondisi darurat aktif (*"tolong terjebak banjir"*, *"ada yang tertimbun longsor"*, *"sos"*) sebelum skoring intent biasa dan langsung menampilkan panduan penyelamatan ringkas beserta informasi kontak darurat **112 / 115**.
 2. **NLU Rule-Based Deterministik & Tahan Typo:**
    - Normalisasi teks, kamus bahasa sehari-hari/slang (`kb/slang.json`), dan pencocokan batas kata.
    - Toleransi salah ketik (*fuzzy matching* `rapidfuzz` dengan ambang `0.85` untuk kata $\ge 4$ huruf, misal `gmpa` $\rightarrow$ `gempa`).
    - Rumus skoring transparan: kata kunci kuat berbobot `3`, kata kunci pendukung berbobot `1`, $\text{confidence} = \min(1.0, \text{skor mentah} / 6)$, ambang minimal `0.50`, dan deteksi ambiguitas bila selisih dua kandidat teratas `< 0.15`.
 3. **Konteks Percakapan Multi-Giliran & Klarifikasi Interaktif:**
    - Menyimpan konteks bencana, fase, dan intent terakhir di Flask session (kedaluwarsa otomatis setelah 10 menit tanpa aktivitas).
-   - Menanyakan klarifikasi dengan tombol cepat bila pengguna belum menyebutkan jenis bencana atau fase.
+   - Menanyakan klarifikasi bernomor (`01.`, `02.`, dst.) bila pengguna belum menyebutkan jenis bencana atau fase, serta mendukung balasan berupa kata kunci maupun nomor pilihan.
 4. **Arsitektur Tahan-Gagal (*Fail-Safe*):**
    - **Core Engine Murni (`core/`):** Bebas dari dependensi Flask maupun database.
    - **Tahan Kegagalan MySQL:** Jika MySQL XAMPP belum dinyalakan, chatbot **tetap menjawab normal** (pencatatan log dilewati secara aman).
    - **Mode Darurat Bawaan:** Jika berkas JSON di `kb/` rusak, aplikasi tetap menyala menggunakan `core/fallback_bawaan.py` agar layanan nomor darurat **112** dan langkah keselamatan dasar tidak pernah mati.
-5. **Panel Debug NLU & Dasbor Observabilitas (`/admin`):**
-   - Toggle **Debug NLU** langsung di header chat untuk melihat `intent`, `confidence`, `entity`, `aksi`, dan kandidat skor tiap pesan saat demo.
-   - Halaman `/admin` untuk memantau statistik pesan, latensi, feedback 👍/👎, serta daftar ucapan tidak dikenali yang sudah dimasking dari data pribadi (PII).
 
 ---
 
-## 📁 Struktur Proyek
+## Struktur Proyek
 
 ```text
 sigap-bot/
@@ -41,7 +40,7 @@ sigap-bot/
 │   ├── intents.py              # Skoring confidence intent & fuzzy matching
 │   ├── context.py              # Resolusi konteks multi-giliran & TTL sesi
 │   ├── dialog.py               # State machine dialog (IDLE, MENUNGGU_KLARIFIKASI, MODE_DARURAT)
-│   ├── responder.py            # Penyusun balasan, sumber resmi, dan tombol cepat
+│   ├── responder.py            # Penyusun balasan, sumber resmi, dan daftar klarifikasi
 │   ├── engine.py               # Antarmuka utama Core.proses(pesan, sesi)
 │   └── fallback_bawaan.py      # KB cadangan jika berkas JSON utama gagal dimuat
 ├── kb/                         # Knowledge Base (JSON)
@@ -54,11 +53,11 @@ sigap-bot/
 ├── web/                        # Antarmuka Web & Keamanan Tampilan
 │   ├── formatter.py            # Escape HTML & konversi format aman (anti-XSS)
 │   ├── templates/
-│   │   ├── index.html          # Halaman utama chat SIGAP
-│   │   └── admin.html          # Halaman observabilitas & statistik (/admin)
+│   │   └── index.html          # Halaman utama chat SIGAP (Tactical Field Manual UI)
 │   └── static/
 │       ├── style.css
-│       └── chat.js
+│       ├── chat.js
+│       └── sigap-title.svg
 ├── db/                         # Integrasi Database MySQL XAMPP
 │   ├── koneksi.py              # Koneksi PyMySQL
 │   ├── repository.py           # Pencatatan log, feedback, dan masking PII
@@ -83,7 +82,7 @@ sigap-bot/
 
 ---
 
-## 🚀 Panduan Menjalankan Lokal (XAMPP + Flask)
+## Panduan Menjalankan Lokal (XAMPP + Flask)
 
 ### 1. Prasyarat
 - **XAMPP** terpasang (hanya modul **MySQL** yang digunakan; Apache hanya diperlukan bila ingin membuka phpMyAdmin).
@@ -95,7 +94,7 @@ sigap-bot/
 1. **Nyalakan MySQL di XAMPP:**
    Buka **XAMPP Control Panel** $\rightarrow$ klik **Start** pada modul **MySQL** (dan Apache bila ingin membuka phpMyAdmin).
 2. **Buat Tabel Database:**
-   Buka `http://localhost/phpmyadmin` $\rightarrow$ klik tab **SQL** $\rightarrow$ salin dan tempel seluruh isi berkas [`db/schema.sql`](file:///c:/Kuliah/Semester%205/AplikasiWeb/sigap-bot/db/schema.sql) $\rightarrow$ klik **Go**.
+   Buka `http://localhost/phpmyadmin` $\rightarrow$ klik tab **SQL** $\rightarrow$ salin dan tempel seluruh isi berkas `db/schema.sql` $\rightarrow$ klik **Go**.
 3. **Siapkan Virtual Environment & Paket Python:**
    ```powershell
    python -m venv venv
@@ -118,14 +117,13 @@ sigap-bot/
 python app.py
 ```
 
-Buka **http://127.0.0.1:5000** di browser Anda.
+Buka **http://127.0.0.1:5000** di browser Anda:
 - Halaman Chat Utama: `http://127.0.0.1:5000/`
-- Halaman Admin & Statistik: `http://127.0.0.1:5000/admin`
 - Cek Kesehatan Sistem: `http://127.0.0.1:5000/health`
 
 ---
 
-## 🧪 Menjalankan Pengujian & Evaluasi Kualitas
+## Menjalankan Pengujian & Evaluasi Kualitas
 
 ```powershell
 # 1. Validasi aturan keselamatan & struktur Knowledge Base
@@ -143,13 +141,12 @@ pytest -v
 
 ---
 
-## 🛠️ Pemecahan Masalah Umum (Troubleshooting)
+## Pemecahan Masalah Umum (Troubleshooting)
 
 | Masalah | Penyebab Umum | Solusi |
 |---|---|---|
 | MySQL di XAMPP tidak mau start | Port `3306` dipakai layanan MySQL lain | Hentikan service MySQL lain di Windows Services, atau sesuaikan `DB_PORT` di `.env` |
-| Chatbot menjawab, tetapi `/admin` kosong | Modul MySQL di XAMPP belum dinyalakan atau `schema.sql` belum dijalankan | Nyalakan MySQL di XAMPP dan jalankan `db/schema.sql` di phpMyAdmin; cek status di `/health` |
+| Log database tidak tercatat | Modul MySQL di XAMPP belum dinyalakan atau `schema.sql` belum dijalankan | Nyalakan MySQL di XAMPP dan jalankan `db/schema.sql` di phpMyAdmin; cek status di `/health` |
 | `Access denied for user 'root'` | Password root MySQL Anda tidak kosong | Isi `DB_PASSWORD` di `.env` sesuai konfigurasi XAMPP Anda |
 | Port `5000` sudah dipakai aplikasi lain | Proses lain menggunakan port 5000 | Ubah nilai `PORT=5001` di berkas `.env` lalu jalankan ulang `python app.py` |
 | Tampilan CSS/JS belum berubah setelah diedit | Cache browser | Tekan `Ctrl + F5` di browser untuk muat ulang paksa |
-
