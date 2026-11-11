@@ -1,0 +1,62 @@
+{
+  "versi": "2.0.0",
+  "nomor_darurat": [
+    {
+      "kode": "112",
+      "nama": "Layanan Darurat Terpadu Nasional",
+      "deskripsi": "Panggilan darurat bebas pulsa 24 jam untuk berbagai kondisi gawat darurat di Indonesia.",
+      "prioritas": 1
+    },
+    {
+      "kode": "115",
+      "nama": "Basarnas (Badan Nasional Pencarian dan Pertolongan)",
+      "deskripsi": "Pencarian, pertolongan, dan evakuasi korban bencana atau kecelakaan (SAR).",
+      "prioritas": 2
+    },
+    {
+      "kode": "117",
+      "nama": "Pusat Informasi BNPB",
+      "deskripsi": "Pusat panggilan Badan Nasional Penanggulangan Bencana untuk informasi kebencanaan.",
+      "prioritas": 3
+    },
+    {
+      "kode": "119",
+      "nama": "Ambulans & Gawat Darurat Medis (Kemenkes)",
+      "deskripsi": "Layanan pertolongan medis darurat dan pengiriman ambulans.",
+      "prioritas": 4
+    },
+    {
+      "kode": "113",
+      "nama": "Pemadam Kebakaran & Penyelamatan",
+      "deskripsi": "Penanganan kebakaran dan penyelamatan darurat lokal.",
+      "prioritas": 5
+    },
+    {
+      "kode": "123",
+      "nama": "PLN (Gangguan Listrik Darurat)",
+      "deskripsi": "Laporan bahaya kabel putus, gardu terendam banjir, atau pemadaman darurat.",
+      "prioritas": 6
+    }
+  ],
+  "kanal_resmi": [
+    {
+      "lembaga": "BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)",
+      "fungsi": "Informasi resmi gempa bumi terkini, prakiraan cuaca ekstrem, dan peringatan dini tsunami.",
+      "url": "https://www.bmkg.go.id",
+      "aplikasi": "InfoBMKG"
+    },
+    {
+      "lembaga": "BNPB (Badan Nasional Penanggulangan Bencana)",
+      "fungsi": "Panduan kesiapsiagaan bencana nasional, buku saku tanggap tangkas tangguh, dan data penanggulangan bencana.",
+      "url": "https://www.bnpb.go.id",
+      "aplikasi": "inaRISK Personal"
+    },
+    {
+      "lembaga": "PVMBG / Badan Geologi Kementerian ESDM",
+      "fungsi": "Status aktivitas gunung api dan peta potensi gerakan tanah / tanah longsor.",
+      "url": "https://magma.esdm.go.id",
+      "aplikasi": "MAGMA Indonesia"
+    }
+  ]
+}
+

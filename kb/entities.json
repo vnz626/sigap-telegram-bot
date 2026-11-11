@@ -1,0 +1,269 @@
+{
+  "versi": "2.0.0",
+  "bencana": {
+    "gempa": {
+      "prioritas": 1,
+      "label": "Gempa Bumi",
+      "sinonim": [
+        "gempa",
+        "gempa bumi",
+        "lindu",
+        "gempa susulan",
+        "guncangan",
+        "tanah goyang",
+        "bumi goyang",
+        "gmpa",
+        "gempaa"
+      ]
+    },
+    "banjir": {
+      "prioritas": 1,
+      "label": "Banjir",
+      "sinonim": [
+        "banjir",
+        "air naik",
+        "meluap",
+        "sungai meluap",
+        "banjir bandang",
+        "genangan",
+        "kebanjiran",
+        "bnjir",
+        "air banjir"
+      ]
+    },
+    "longsor": {
+      "prioritas": 1,
+      "label": "Tanah Longsor",
+      "sinonim": [
+        "longsor",
+        "tanah longsor",
+        "tanah bergerak",
+        "tanah ambles",
+        "lereng runtuh",
+        "longsoran",
+        "lereng retak"
+      ]
+    },
+    "tsunami": {
+      "prioritas": 2,
+      "label": "Tsunami",
+      "sinonim": [
+        "tsunami",
+        "gelombang pasang besar",
+        "air laut surut"
+      ]
+    },
+    "gunung_api": {
+      "prioritas": 2,
+      "label": "Gunung Api",
+      "sinonim": [
+        "gunung meletus",
+        "erupsi",
+        "abu vulkanik",
+        "awan panas",
+        "gunung api"
+      ]
+    },
+    "angin_kencang": {
+      "prioritas": 2,
+      "label": "Angin Kencang / Puting Beliung",
+      "sinonim": [
+        "puting beliung",
+        "angin kencang",
+        "angin ribut",
+        "badai",
+        "angin topan"
+      ]
+    }
+  },
+  "fase": {
+    "sebelum": {
+      "label": "Sebelum Bencana",
+      "sinonim": [
+        "sebelum",
+        "sebelumnya",
+        "persiapan",
+        "siaga",
+        "antisipasi",
+        "cegah",
+        "mitigasi",
+        "biar aman",
+        "jaga-jaga",
+        "siap-siap"
+      ]
+    },
+    "saat": {
+      "label": "Saat Bencana",
+      "sinonim": [
+        "saat",
+        "ketika",
+        "lagi",
+        "sedang terjadi",
+        "sekarang",
+        "pas",
+        "barusan",
+        "harus gimana"
+      ]
+    },
+    "sesudah": {
+      "label": "Sesudah Bencana",
+      "sinonim": [
+        "setelah",
+        "sesudah",
+        "sesudahnya",
+        "pasca",
+        "habis",
+        "abis",
+        "usai",
+        "pemulihan",
+        "udah reda",
+        "udah surut"
+      ]
+    }
+  },
+  "situasi": {
+    "kendaraan": {
+      "label": "Di Dalam Kendaraan",
+      "sinonim": [
+        "mobil",
+        "mobilku",
+        "motor",
+        "di jalan",
+        "nyetir",
+        "angkot",
+        "kereta",
+        "kendaraan"
+      ]
+    },
+    "gedung_tinggi": {
+      "label": "Gedung Bertingkat / Lift",
+      "sinonim": [
+        "gedung",
+        "gedung tinggi",
+        "gedung bertingkat",
+        "lantai",
+        "apartemen",
+        "mall",
+        "kantor",
+        "lift"
+      ]
+    },
+    "sekolah_kampus": {
+      "label": "Sekolah / Kampus / Kos",
+      "sinonim": [
+        "sekolah",
+        "kelas",
+        "kampus",
+        "kos",
+        "asrama"
+      ]
+    },
+    "pesisir": {
+      "label": "Wilayah Pesisir / Pantai",
+      "sinonim": [
+        "pantai",
+        "pesisir",
+        "laut",
+        "dekat laut"
+      ]
+    },
+    "luar_ruangan": {
+      "label": "Luar Ruangan / Area Terbuka",
+      "sinonim": [
+        "lapangan",
+        "tempat terbuka",
+        "di luar",
+        "luar ruangan"
+      ]
+    },
+    "rumah": {
+      "label": "Di Rumah",
+      "sinonim": [
+        "rumah",
+        "di rumah",
+        "dalam rumah",
+        "kamar",
+        "rumah bertingkat",
+        "rumah dekat lereng"
+      ]
+    },
+    "lereng_gunung": {
+      "label": "Lereng / Gunung / Bantaran Sungai",
+      "sinonim": [
+        "gunung",
+        "lereng",
+        "tebing",
+        "pendakian",
+        "camping",
+        "dekat sungai",
+        "aliran sungai",
+        "bantaran sungai"
+      ]
+    }
+  },
+  "kelompok": {
+    "anak_bayi": {
+      "label": "Anak & Bayi",
+      "sinonim": [
+        "anak",
+        "bayi",
+        "balita"
+      ]
+    },
+    "lansia": {
+      "label": "Lansia",
+      "sinonim": [
+        "lansia",
+        "nenek",
+        "kakek",
+        "orang tua"
+      ]
+    },
+    "difabel": {
+      "label": "Penyandang Disabilitas / Difabel",
+      "sinonim": [
+        "difabel",
+        "kursi roda",
+        "disabilitas"
+      ]
+    },
+    "ibu_hamil": {
+      "label": "Ibu Hamil",
+      "sinonim": [
+        "ibu hamil",
+        "hamil"
+      ]
+    },
+    "hewan_peliharaan": {
+      "label": "Hewan Peliharaan",
+      "sinonim": [
+        "hewan peliharaan",
+        "peliharaan"
+      ]
+    }
+  },
+  "istilah": {
+    "magnitudo": ["magnitudo"],
+    "intensitas": ["intensitas"],
+    "episenter": ["episenter", "episentrum"],
+    "hiposenter": ["hiposenter", "hiposentrum"],
+    "mmi": ["mmi", "skala mmi"],
+    "megathrust": ["megathrust"],
+    "gempa_susulan": ["gempa susulan", "aftershock"],
+    "early_warning": ["early warning", "peringatan dini"],
+    "zona_merah": ["zona merah"],
+    "jalur_evakuasi": ["jalur evakuasi", "titik kumpul"],
+    "tes": ["tempat evakuasi sementara"],
+    "status_gunung_api": ["status gunung api", "status awas gunung", "waspada dan siaga", "status gunung"],
+    "tas_siaga": ["tas siaga", "emergency kit", "go bag"],
+    "mitigasi": ["mitigasi"],
+    "kesiapsiagaan": ["kesiapsiagaan"],
+    "evakuasi_vertikal": ["evakuasi vertikal"],
+    "gempa": ["apa itu gempa", "pengertian gempa", "definisi gempa", "arti gempa"],
+    "banjir": ["apa itu banjir", "pengertian banjir", "definisi banjir", "arti banjir"],
+    "longsor": ["apa itu longsor", "apa itu tanah longsor", "pengertian longsor", "definisi longsor", "arti longsor"],
+    "tsunami": ["apa itu tsunami", "pengertian tsunami", "definisi tsunami", "arti tsunami"],
+    "gunung_api": ["apa itu erupsi", "apa itu gunung meletus", "pengertian erupsi"],
+    "angin_kencang": ["apa itu puting beliung", "pengertian puting beliung"]
+  }
+}

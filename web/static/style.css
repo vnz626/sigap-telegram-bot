@@ -1,0 +1,593 @@
+/* ==========================================================================
+   SIGAP — Tactical Field Manual Civic-Tech Design System
+   Palet, Tipografi, dan Tata Letak sesuai DESIGN.md & code.html
+   ========================================================================== */
+
+:root {
+  --canvas-alabaster: #F4F5F7;
+  --surface-pure: #FFFFFF;
+  --surface-subtle: #F8FAFC;
+
+  --text-bold: #0F172A;
+  --text-primary: #1E293B;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+
+  --border-default: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --border-subtle: #F1F5F9;
+
+  --signal-vermilion: #DC2626;
+  --tactical-amber: #D97706;
+
+  --font-display: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-bold);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Topographic contour line atmospheric pattern */
+.topo-bg {
+  background-color: var(--canvas-alabaster);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    repeating-radial-gradient(circle at 10% 20%, transparent 0, transparent 40px, rgba(15, 23, 42, 0.022) 41px, transparent 42px),
+    repeating-radial-gradient(circle at 90% 80%, transparent 0, transparent 55px, rgba(15, 23, 42, 0.025) 56px, transparent 57px);
+  background-size: 100% 100%, 800px 800px, 900px 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Unified Chat Console Container */
+.console-shell {
+  width: 100%;
+  max-width: 840px;
+  height: calc(100vh - 48px);
+  max-height: 900px;
+  margin: 0 24px;
+  background-color: var(--surface-pure);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* Top Command Bar (Header 76px) */
+.top-command-bar {
+  height: 76px;
+  width: 100%;
+  padding: 0 32px;
+  background-color: var(--surface-pure);
+  border-bottom: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.brand-anchor {
+  display: flex;
+  align-items: center;
+}
+
+.brand-mark {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.brand-logotype {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: -0.05em;
+  color: var(--text-bold);
+}
+
+.tactical-horizon-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 3px;
+  background-color: var(--signal-vermilion);
+  border-radius: 9999px;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 28px;
+  background-color: var(--border-strong);
+  margin: 0 16px;
+}
+
+.brand-subtitle {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--text-muted);
+  max-width: 260px;
+}
+
+.command-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.emergency-callout {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  color: var(--signal-vermilion);
+  text-decoration: none;
+}
+
+.emergency-callout:hover {
+  opacity: 0.85;
+}
+
+.btn-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background-color: var(--surface-pure);
+  color: var(--text-bold);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-reset:hover {
+  background-color: var(--surface-subtle);
+}
+
+.btn-reset:active {
+  transform: scale(0.96);
+}
+
+.icon-refresh {
+  flex-shrink: 0;
+}
+
+.kb-warning-strip {
+  padding: 8px 32px;
+  background-color: #FEF2F2;
+  border-bottom: 1px solid #FECACA;
+  color: var(--signal-vermilion);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Scrollable Chat Stream (Field Manual Layout) */
+.chat-stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  background-color: var(--surface-pure);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  scroll-behavior: smooth;
+}
+
+/* Ultra-thin scrollbar */
+.stream-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.stream-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.stream-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+.stream-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-subtle);
+}
+
+/* ==========================================================================
+   1. Bot Message Block (Open Field Manual Format — No Enclosed Bubble)
+   ========================================================================== */
+.msg-block-bot {
+  max-width: 85%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  border-left: 3px solid var(--tactical-amber);
+  animation: fadeInBlock 0.18s ease-out;
+}
+
+/* Greeting / Standard Civil Info uses Deep Slate Navy left rule */
+.msg-block-bot.tone-navy {
+  border-left-color: var(--text-bold);
+}
+
+/* Tactical Directives / Advisory uses Tactical Amber left rule */
+.msg-block-bot.tone-amber {
+  border-left-color: var(--tactical-amber);
+}
+
+/* Active Life-Safety Emergency uses Signal Vermilion left rule */
+.msg-block-bot.tone-vermilion {
+  border-left-color: var(--signal-vermilion);
+}
+
+@keyframes fadeInBlock {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.msg-header-bot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.msg-sender-bot {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-bold);
+}
+
+.msg-block-bot.tone-vermilion .msg-sender-bot {
+  color: var(--signal-vermilion);
+}
+
+.msg-dot {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-subtle);
+}
+
+.msg-time {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+}
+
+.msg-body-bot {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-primary);
+}
+
+.msg-paragraph + .msg-paragraph {
+  margin-top: 10px;
+}
+
+.msg-paragraph + .protocol-list {
+  margin-top: 12px;
+}
+
+.protocol-list + .msg-paragraph {
+  margin-top: 12px;
+}
+
+.msg-body-bot strong {
+  font-weight: 700;
+  color: var(--text-bold);
+}
+
+.msg-body-bot code {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--surface-subtle);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-default);
+}
+
+/* Ordered Directive Protocols (01., 02., 03.) */
+.protocol-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 4px 0;
+  padding: 0;
+}
+
+.protocol-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.protocol-num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: var(--text-bold);
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.protocol-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--text-primary);
+}
+
+/* Citation Footnote (SUMBER RESMI: BNPB, BMKG) */
+.msg-citation {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.msg-source {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   2. User Message Bubble (Solid Slate Navy #0F172A, Asymmetric Radius)
+   ========================================================================== */
+.msg-block-user {
+  max-width: 70%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInBlock 0.15s ease-out;
+}
+
+.msg-header-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 6px;
+  user-select: none;
+  text-align: right;
+}
+
+.msg-sender-user {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.msg-bubble-user {
+  background-color: var(--text-bold);
+  color: #FFFFFF;
+  border-radius: 12px 2px 12px 12px;
+  padding: 12px 18px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  word-wrap: break-word;
+}
+
+/* ==========================================================================
+   3. Typing Indicator & Unified Command Bar (Bottom Input Zone)
+   ========================================================================== */
+.typing-indicator {
+  padding: 0 32px 12px;
+  background-color: var(--surface-pure);
+}
+
+.typing-indicator.hidden {
+  display: none;
+}
+
+.typing-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+}
+
+.bottom-command-zone {
+  padding: 16px 32px 24px;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--surface-pure);
+  flex-shrink: 0;
+}
+
+.unified-input-bar {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--surface-subtle);
+  border: 1.5px solid var(--border-strong);
+  padding: 6px 6px 6px 20px;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.unified-input-bar:focus-within {
+  border-color: var(--text-bold);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+#pesanInput {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-bold);
+}
+
+#pesanInput::placeholder {
+  color: var(--text-subtle);
+}
+
+#pesanInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.char-counter {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+  flex-shrink: 0;
+  margin-right: 14px;
+  margin-left: 10px;
+  user-select: none;
+}
+
+.btn-submit {
+  height: 40px;
+  padding: 0 20px;
+  background-color: var(--text-bold);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.12s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #1E293B;
+}
+
+.btn-submit:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn-submit:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.arrow-glyph {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile Responsive (Full-bleed 100% height & width) */
+@media (max-width: 768px) {
+  .console-shell {
+    height: 100vh;
+    max-height: none;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .top-command-bar {
+    padding: 0 20px;
+  }
+
+  .brand-divider,
+  .brand-subtitle {
+    display: none;
+  }
+
+  .chat-stream {
+    padding: 24px 20px;
+  }
+
+  .msg-block-bot {
+    max-width: 92%;
+  }
+
+  .msg-block-user {
+    max-width: 82%;
+  }
+
+  .bottom-command-zone {
+    padding: 12px 20px 18px;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIGAP - Sistem Informasi Gawat Darurat &amp; Antisipasi Penanggulangan</title>
+  <!-- Google Fonts: Montserrat & Plus Jakarta Sans (dengan fallback sistem bila offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="topo-bg">
+  <!-- Main Unified Chat Console Container -->
+  <main class="console-shell">
+    <!-- Top Command Bar (Header) -->
+    <header class="top-command-bar">
+      <!-- Left Anchor: Brand Typography & Context Subtitle -->
+      <div class="brand-anchor">
+        <div class="brand-mark">
+          <span class="brand-logotype">SIGAP</span>
+          <span class="tactical-horizon-bar" aria-hidden="true"></span>
+        </div>
+        <div class="brand-divider" aria-hidden="true"></div>
+        <span class="brand-subtitle">
+          Sistem Informasi Gawat Darurat &amp; Antisipasi Penanggulangan
+        </span>
+      </div>
+
+      <!-- Right Anchor: Tactical Emergency Callout & Reset Tool -->
+      <div class="command-actions">
+        <a href="tel:112" class="emergency-callout" title="Hubungi Nomor Darurat Nasional 112">DARURAT: 112</a>
+        <button id="btnReset" type="button" class="btn-reset" title="Mulai percakapan baru">
+          <svg class="icon-refresh" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+            <polyline points="21 3 21 9 15 9" />
+          </svg>
+          <span>Baru</span>
+        </button>
+      </div>
+    </header>
+
+    {% if mode_bawaan %}
+    <div class="kb-warning-strip" role="alert">
+      PERINGATAN SISTEM: Basis pengetahuan utama bermasalah. Sistem berjalan dalam Mode Darurat Bawaan (112).
+    </div>
+    {% endif %}
+
+    <!-- Scrollable Chat Stream (Field Manual Layout) -->
+    <section
+      id="chatContainer"
+      class="chat-stream stream-scrollbar"
+      aria-label="Jendela Komunikasi Kesiapsiagaan Bencana"
+      aria-live="polite"
+    >
+      <!-- Pesan dimuat secara dinamis lewat chat.js -->
+    </section>
+
+    <!-- Typing Indicator -->
+    <div id="typingIndicator" class="typing-indicator hidden" aria-hidden="true">
+      <span class="typing-label">SIGAP SEDANG MENYUSUN PROTOKOL...</span>
+    </div>
+
+    <!-- Unified Command Bar (Fixed Bottom Input Zone) -->
+    <footer class="bottom-command-zone">
+      <form id="chatForm" class="unified-input-bar" autocomplete="off">
+        <label class="sr-only" for="pesanInput">Ketik pertanyaan Anda</label>
+        <input
+          id="pesanInput"
+          name="pesan"
+          type="text"
+          maxlength="1000"
+          autocomplete="off"
+          placeholder="Ketik pertanyaan Anda (contoh: langkah saat gempa, isi tas siaga, tanda tanah longsor)..."
+          required
+        />
+        <span id="charCount" class="char-counter" aria-hidden="true">0/1000</span>
+        <button id="btnKirim" type="submit" class="btn-submit">
+          <span>KIRIM</span>
+          <span class="arrow-glyph" aria-hidden="true">→</span>
+        </button>
+      </form>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

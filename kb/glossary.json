@@ -1,0 +1,116 @@
+{
+  "versi": "2.0.0",
+  "istilah": {
+    "gempa": {
+      "nama": "Gempa Bumi",
+      "definisi": "**Gempa Bumi** adalah getaran atau guncangan yang terjadi di permukaan bumi akibat pelepasan energi dari dalam secara tiba-tiba yang menciptakan gelombang seismik (umumnya karena pergerakan lempeng tektonik, patahan/sesar aktif, atau aktivitas gunung api).\n\nKetik **\"sebelum gempa\"**, **\"saat gempa\"**, atau **\"sesudah gempa\"** untuk melihat langkah keselamatannya.",
+      "sumber": "BMKG & BNPB"
+    },
+    "banjir": {
+      "nama": "Banjir",
+      "definisi": "**Banjir** adalah peristiwa tergenangnya daratan yang biasanya kering akibat volume air yang meningkat (karena curah hujan ekstrem, meluapnya air sungai, jebolnya tanggul, atau buruknya sistem drainase).\n\nKetik **\"sebelum banjir\"**, **\"saat banjir\"**, atau **\"sesudah banjir\"** untuk melihat panduan keselamatannya.",
+      "sumber": "BNPB"
+    },
+    "longsor": {
+      "nama": "Tanah Longsor",
+      "definisi": "**Tanah Longsor** adalah perpindahan material pembentuk lereng berupa batuan, bahan rombakan, tanah, atau material campuran yang bergerak ke bawah atau keluar lereng akibat terganggunya kestabilan tanah (sering dipicu oleh hujan deras berkepanjangan di lereng curam).\n\nKetik **\"sebelum longsor\"**, **\"saat longsor\"**, atau **\"tanda longsor\"** untuk melihat panduan keselamatannya.",
+      "sumber": "PVMBG & BNPB"
+    },
+    "tsunami": {
+      "nama": "Tsunami",
+      "definisi": "**Tsunami** adalah rangkaian gelombang laut berkecepatan tinggi yang menjalar ke wilayah pesisir akibat gangguan dasar laut secara tiba-tiba, seperti gempa bumi tektonik bawah laut bermagnitudo besar, letusan gunung api bawah laut, atau longsoran bawah laut.\n\nKetik **\"saat tsunami\"** untuk melihat langkah evakuasinya.",
+      "sumber": "BMKG"
+    },
+    "gunung_api": {
+      "nama": "Erupsi Gunung Api",
+      "definisi": "**Erupsi Gunung Api** adalah proses keluarnya magma, gas vulkanik, abu vulkanik, dan material pijar/awan panas dari dalam perut bumi ke permukaan melalui kawah gunung berapi.\n\nKetik **\"saat gunung meletus\"** atau **\"arti status awas gunung\"** untuk informasi lebih lanjut.",
+      "sumber": "PVMBG"
+    },
+    "angin_kencang": {
+      "nama": "Angin Puting Beliung / Angin Kencang",
+      "definisi": "**Puting Beliung / Angin Kencang** adalah pusaran angin kencang dengan kecepatan tinggi yang bergerak lurus atau berputar dan berlangsung singkat akibat pertumbuhan awan Cumulonimbus (Cb) saat masa peralihan musim (pancaroba).\n\nKetik **\"saat puting beliung\"** untuk melihat langkah penyelamatan diri.",
+      "sumber": "BMKG & BNPB"
+    },
+    "magnitudo": {
+      "nama": "Magnitudo",
+      "definisi": "**Magnitudo** adalah ukuran kekuatan energi yang dilepaskan di pusat gempa bumi (satuannya angka seperti M 5,6). Nilai magnitudo bersifat tetap di mana pun diukur.\n\n**Bedanya dengan Intensitas (MMI):** Magnitudo mengukur energi di sumber gempa, sedangkan **intensitas (skala MMI)** mengukur seberapa kuat guncangan dirasakan di suatu lokasi permukaan (semakin dekat ke pusat gempa, intensitas guncangannya semakin kuat).",
+      "sumber": "BMKG"
+    },
+    "intensitas": {
+      "nama": "Intensitas Gempa (Skala MMI)",
+      "definisi": "**Intensitas gempa (Skala MMI / Modified Mercalli Intensity)** adalah ukuran dampak getaran gempa yang dirasakan manusia dan kerusakan bangunan di suatu lokasi (ditulis dalam angka Romawi I sampai XII).\n\n**Bedanya dengan Magnitudo:** Magnitudo adalah kekuatan energi di pusat gempa (satu nilai tetap), sedangkan intensitas berbeda-beda tergantung jarak dan kondisi tanah di lokasi Anda.",
+      "sumber": "BMKG"
+    },
+    "episenter": {
+      "nama": "Episenter",
+      "definisi": "**Episenter (Episentrum)** adalah titik di permukaan bumi (darat maupun laut) yang berada tepat tegak lurus di atas pusat terjadinya gempa bumi (hiposenter). Titik inilah yang biasanya ditunjukkan pada peta info gempa BMKG.",
+      "sumber": "BMKG"
+    },
+    "hiposenter": {
+      "nama": "Hiposenter",
+      "definisi": "**Hiposenter (Hiposentrum)** adalah titik pusat sumber gempa bumi yang berada di bawah permukaan tanah pada kedalaman tertentu (misalnya kedalaman 10 km). Gempa dengan hiposenter dangkal (< 60 km) umumnya menimbulkan guncangan permukaan yang lebih terasa.",
+      "sumber": "BMKG"
+    },
+    "mmi": {
+      "nama": "Skala MMI (Modified Mercalli Intensity)",
+      "definisi": "**Skala MMI** adalah satuan untuk mengukur tingkat guncangan gempa di permukaan bumi dari skala I (tidak terasa) hingga XII (kerusakan total). Contoh: III MMI berarti getaran dirasakan nyata di dalam rumah seperti ada truk berlalu.",
+      "sumber": "BMKG"
+    },
+    "megathrust": {
+      "nama": "Megathrust",
+      "definisi": "**Megathrust** adalah zona pertemuan lempeng tektonik bumi (zona subduksi) yang sangat luas dan dangkal yang dapat menyimpan akumulasi energi gempa besar. Istilah megathrust merujuk pada **zona sumber gempanya** yang sudah ada sejak jutaan tahun lalu, **bukan** prediksi bahwa gempa akan terjadi hari ini atau besok.",
+      "sumber": "BMKG"
+    },
+    "gempa_susulan": {
+      "nama": "Gempa Susulan (Aftershock)",
+      "definisi": "**Gempa susulan** adalah rangkaian gempa bermagnitudo lebih kecil yang terjadi setelah gempa utama di zona patahan yang sama karena kerak bumi sedang menyesuaikan posisi menuju keseimbangan baru. Waspadai bangunan yang sudah retak saat terjadi gempa susulan.",
+      "sumber": "BMKG"
+    },
+    "early_warning": {
+      "nama": "Early Warning System (Peringatan Dini)",
+      "definisi": "**Early Warning System (EWS)** adalah sistem pemantauan dan penyebaran informasi peringatan dini bahaya bencana (seperti peringatan dini tsunami atau cuaca ekstrem oleh BMKG, serta alat deteksi pergerakan tanah oleh BPBD) agar masyarakat punya waktu melakukan evakuasi sebelum bahaya tiba.",
+      "sumber": "BNPB & BMKG"
+    },
+    "zona_merah": {
+      "nama": "Zona Merah Rawan Bencana",
+      "definisi": "**Zona merah** adalah kawasan dengan tingkat kerawanan atau bahaya bencana tertinggi (misalnya kawasan rawan aliran awan panas gunung api, bantaran sungai rawan banjir bandang, atau lereng curam rawan longsor) yang memerlukan pembatasan aktivitas dan kesiapan evakuasi ketat.",
+      "sumber": "BNPB & PVMBG"
+    },
+    "jalur_evakuasi": {
+      "nama": "Jalur Evakuasi",
+      "definisi": "**Jalur evakuasi** adalah rute khusus yang dirancang aman, bebas hambatan, dan diberi rambu petunjuk arah berwarna hijau/oranye untuk memandu warga keluar dari area berbahaya menuju **Titik Kumpul** atau **Tempat Evakuasi Sementara (TES)**.",
+      "sumber": "BNPB"
+    },
+    "tes": {
+      "nama": "TES (Tempat Evakuasi Sementara)",
+      "definisi": "**TES (Tempat Evakuasi Sementara)** adalah lokasi atau bangunan aman (seperti bukit, gedung shelter tsunami, atau lapangan di dataran tinggi) yang digunakan warga untuk berlindung segera saat bencana berlangsung sebelum dipindahkan ke Tempat Evakuasi Akhir.",
+      "sumber": "BNPB"
+    },
+    "status_gunung_api": {
+      "nama": "Status Gunung Api (Normal, Waspada, Siaga, Awas)",
+      "definisi": "Empat tingkatan aktivitas gunung api menurut PVMBG:\n1. **Level I (Normal):** Tidak ada gejala tekanan magma.\n2. **Level II (Waspada):** Aktivitas meningkat di atas normal, mulai terdeteksi gempa vulkanik.\n3. **Level III (Siaga):** Peningkatan aktivitas nyata yang dapat berlanjut ke letusan; warga di zona rawan bersiap evakuasi.\n4. **Level IV (Awas):** Menjelang atau sedang terjadi letusan utama; **wajib evakuasi segera** dari zona bahaya.",
+      "sumber": "PVMBG"
+    },
+    "tas_siaga": {
+      "nama": "Tas Siaga Bencana (Emergency Kit / Go Bag)",
+      "definisi": "**Tas Siaga Bencana** adalah tas ransel berisi kebutuhan pokok bertahan hidup selama minimal **3 hari (72 jam)** pertama saat darurat (dokumen penting kedap air, air minum, makanan tahan lama, P3K, obat pribadi, senter, peluit, power bank, pakaian ganti) yang diletakkan di dekat pintu keluar rumah.",
+      "sumber": "BNPB"
+    },
+    "mitigasi": {
+      "nama": "Mitigasi Bencana",
+      "definisi": "**Mitigasi** adalah serangkaian upaya untuk mengurangi risiko dan dampak bencana, baik melalui pembangunan fisik (seperti penguatan bangunan, tanggul, saluran drainase) maupun peningkatan kesadaran dan kesiapsiagaan masyarakat sebelum bencana terjadi.",
+      "sumber": "BNPB (UU No. 24 Tahun 2007)"
+    },
+    "kesiapsiagaan": {
+      "nama": "Kesiapsiagaan Bencana",
+      "definisi": "**Kesiapsiagaan** adalah serangkaian kegiatan yang dilakukan untuk mengantisipasi bencana melalui pengorganisasian serta langkah yang tepat guna dan berdaya guna (seperti menyiapkan tas siaga, menyepakati titik kumpul keluarga, dan latihan simulasi evakuasi).",
+      "sumber": "BNPB"
+    },
+    "evakuasi_vertikal": {
+      "nama": "Evakuasi Vertikal",
+      "definisi": "**Evakuasi vertikal** adalah penyelamatan diri dengan cara naik ke lantai atas bangunan bertingkat yang kokoh dan tahan gempa/air apabila waktu atau kondisi tidak memungkinkan untuk menjauh secara horizontal ke dataran tinggi (digunakan saat banjir cepat atau ancaman tsunami di perkotaan padat).",
+      "sumber": "BNPB"
+    }
+  }
+}
+

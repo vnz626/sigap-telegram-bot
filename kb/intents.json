@@ -1,0 +1,533 @@
+{
+  "versi": "2.0.0",
+  "intents": [
+    {
+      "id": "INT-90",
+      "tag": "darurat_aktif",
+      "prioritas": 0,
+      "entity_wajib": [],
+      "kuat": [
+        "tolong",
+        "tertimbun",
+        "ada korban",
+        "lagi gempa sekarang",
+        "lagi banjir sekarang",
+        "sekarang juga",
+        "sos",
+        "air udah naik sepinggang",
+        "keluargaku nggak ketemu"
+      ],
+      "pendukung": [
+        "darurat",
+        "cepat",
+        "panik"
+      ]
+    },
+    {
+      "id": "INT-01",
+      "tag": "sapaan",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "halo",
+        "hai",
+        "hi",
+        "hello",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "assalamualaikum",
+        "permisi"
+      ],
+      "pendukung": [
+        "p",
+        "woi",
+        "bot"
+      ]
+    },
+    {
+      "id": "INT-02",
+      "tag": "perkenalan",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "kamu siapa",
+        "siapa kamu",
+        "bisa apa",
+        "fungsi kamu",
+        "apa itu sigap"
+      ],
+      "pendukung": [
+        "tentang",
+        "bot ini"
+      ]
+    },
+    {
+      "id": "INT-03",
+      "tag": "menu_bantuan",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "menu",
+        "bantuan",
+        "help",
+        "topik",
+        "panduan",
+        "mulai"
+      ],
+      "pendukung": [
+        "apa saja",
+        "daftar"
+      ]
+    },
+    {
+      "id": "INT-04",
+      "tag": "terima_kasih",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "makasih",
+        "terima kasih",
+        "thanks",
+        "thx",
+        "trims"
+      ],
+      "pendukung": [
+        "oke",
+        "sip",
+        "mantap"
+      ]
+    },
+    {
+      "id": "INT-05",
+      "tag": "pamit",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "dadah",
+        "bye",
+        "sampai jumpa",
+        "udahan",
+        "cukup"
+      ],
+      "pendukung": [
+        "pamit",
+        "dulu ya"
+      ]
+    },
+    {
+      "id": "INT-06",
+      "tag": "feedback",
+      "prioritas": 2,
+      "entity_wajib": [],
+      "kuat": [
+        "saran",
+        "kritik",
+        "masukan",
+        "lapor bug",
+        "error"
+      ],
+      "pendukung": [
+        "kurang",
+        "perbaiki"
+      ]
+    },
+    {
+      "id": "INT-10",
+      "tag": "info_sebelum",
+      "prioritas": 1,
+      "entity_wajib": ["bencana"],
+      "kuat": [
+        "persiapan",
+        "sebelum",
+        "sebelumnya",
+        "siaga",
+        "antisipasi",
+        "mitigasi",
+        "jaga-jaga",
+        "siap-siap",
+        "biar aman dari",
+        "mengurangi risiko",
+        "perlu disiapkan"
+      ],
+      "pendukung": [
+        "biar aman",
+        "cegah",
+        "siapin"
+      ]
+    },
+    {
+      "id": "INT-11",
+      "tag": "info_saat",
+      "prioritas": 1,
+      "entity_wajib": ["bencana"],
+      "kuat": [
+        "saat",
+        "ketika",
+        "lagi terjadi",
+        "harus gimana",
+        "harus apa",
+        "harus ngapain",
+        "harus dilakukan",
+        "tindakan",
+        "air naik terus",
+        "ngumpet di mana",
+        "penyelamatan diri"
+      ],
+      "pendukung": [
+        "sekarang",
+        "pas",
+        "barusan",
+        "gede"
+      ]
+    },
+    {
+      "id": "INT-12",
+      "tag": "info_sesudah",
+      "prioritas": 1,
+      "entity_wajib": ["bencana"],
+      "kuat": [
+        "sesudah",
+        "sesudahnya",
+        "setelah",
+        "setelah gempa",
+        "setelah banjir",
+        "setelah longsor",
+        "pasca",
+        "habis",
+        "abis",
+        "pemulihan",
+        "udah reda",
+        "udah surut",
+        "dibersihin",
+        "nyalain listrik",
+        "masuk rumah"
+      ],
+      "pendukung": [
+        "selanjutnya",
+        "terus ngapain",
+        "minum air sumur"
+      ]
+    },
+    {
+      "id": "INT-13",
+      "tag": "tanda_peringatan",
+      "prioritas": 1,
+      "entity_wajib": ["bencana"],
+      "kuat": [
+        "tanda",
+        "tanda-tanda",
+        "ciri",
+        "gejala",
+        "pertanda",
+        "akan terjadi",
+        "akan datang",
+        "mau datang",
+        "mau meluap",
+        "sumur keruh",
+        "lereng retak",
+        "hewan kabur"
+      ],
+      "pendukung": [
+        "waspada",
+        "kenali",
+        "mau longsor"
+      ]
+    },
+    {
+      "id": "INT-14",
+      "tag": "situasi_khusus",
+      "prioritas": 1,
+      "entity_wajib": ["bencana", "situasi"],
+      "kuat": [
+        "kalau di",
+        "lagi di",
+        "bagaimana kalau",
+        "gimana kalau",
+        "terjebak di lift",
+        "pas di kelas",
+        "di kelas",
+        "di lantai",
+        "mobilku kena",
+        "lagi camping"
+      ],
+      "pendukung": [
+        "mobil",
+        "nyetir",
+        "lift",
+        "pantai",
+        "gedung",
+        "kelas",
+        "tempat terbuka",
+        "gunung"
+      ]
+    },
+    {
+      "id": "INT-15",
+      "tag": "penyebab",
+      "prioritas": 2,
+      "entity_wajib": ["bencana"],
+      "kuat": [
+        "kenapa",
+        "mengapa",
+        "penyebab",
+        "bisa terjadi",
+        "kok bisa"
+      ],
+      "pendukung": [
+        "asal",
+        "sebab"
+      ]
+    },
+    {
+      "id": "INT-16",
+      "tag": "kelompok_rentan",
+      "prioritas": 2,
+      "entity_wajib": ["kelompok"],
+      "kuat": [
+        "anak",
+        "bayi",
+        "lansia",
+        "nenek",
+        "kakek",
+        "difabel",
+        "hamil",
+        "kursi roda"
+      ],
+      "pendukung": [
+        "balita",
+        "orang tua"
+      ]
+    },
+    {
+      "id": "INT-20",
+      "tag": "tas_siaga",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "tas siaga",
+        "tas",
+        "isi tas",
+        "perlengkapan",
+        "perlengkapan darurat",
+        "bawa apa",
+        "emergency kit",
+        "go bag",
+        "checklist tas",
+        "tas bencana"
+      ],
+      "pendukung": [
+        "siapin tas",
+        "ngungsi",
+        "isinya"
+      ]
+    },
+    {
+      "id": "INT-21",
+      "tag": "kontak_darurat",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "nomor darurat",
+        "telepon darurat",
+        "hubungi siapa",
+        "telepon siapa",
+        "call center",
+        "minta tolong ke",
+        "minta tolong ke mana",
+        "nomor basarnas",
+        "nomor bpbd",
+        "hubungi ambulans",
+        "112 itu apa"
+      ],
+      "pendukung": [
+        "112",
+        "115",
+        "basarnas",
+        "bpbd",
+        "ambulans"
+      ]
+    },
+    {
+      "id": "INT-22",
+      "tag": "jalur_evakuasi",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "jalur evakuasi",
+        "titik kumpul",
+        "tempat aman",
+        "tempat evakuasi",
+        "evakuasi",
+        "evakuasi vertikal",
+        "rambu evakuasi",
+        "tes",
+        "lari ke mana"
+      ],
+      "pendukung": [
+        "kumpul",
+        "arah lari"
+      ]
+    },
+    {
+      "id": "INT-23",
+      "tag": "rencana_keluarga",
+      "prioritas": 2,
+      "entity_wajib": [],
+      "kuat": [
+        "rencana keluarga",
+        "rencana siaga",
+        "simulasi",
+        "latihan",
+        "drill"
+      ],
+      "pendukung": [
+        "kesepakatan",
+        "kumpul keluarga"
+      ]
+    },
+    {
+      "id": "INT-24",
+      "tag": "sumber_resmi",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "info resmi",
+        "sumber",
+        "bmkg",
+        "bnpb",
+        "pvmbg",
+        "aplikasi",
+        "website"
+      ],
+      "pendukung": [
+        "valid",
+        "terpercaya"
+      ]
+    },
+    {
+      "id": "INT-30",
+      "tag": "definisi_istilah",
+      "prioritas": 1,
+      "entity_wajib": ["istilah"],
+      "kuat": [
+        "apa itu",
+        "apa itu mitigasi",
+        "arti",
+        "maksud",
+        "bedanya",
+        "apa bedanya",
+        "definisi",
+        "pengertian",
+        "itu apa sih",
+        "megathrust itu apa",
+        "gempa susulan itu apa"
+      ],
+      "pendukung": [
+        "istilah",
+        "magnitudo",
+        "intensitas",
+        "episenter",
+        "hiposenter",
+        "megathrust",
+        "mmi"
+      ]
+    },
+    {
+      "id": "INT-31",
+      "tag": "mitos_hoaks",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "bener nggak",
+        "bener nggak gempa",
+        "benarkah",
+        "hoaks",
+        "mitos",
+        "katanya",
+        "katanya sih",
+        "berdiri di pintu",
+        "cuaca panas",
+        "pesan berantai"
+      ],
+      "pendukung": [
+        "isu",
+        "viral",
+        "beredar",
+        "beneran"
+      ]
+    },
+    {
+      "id": "INT-32",
+      "tag": "cek_gempa_terbaru",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "gempa barusan",
+        "gempa tadi",
+        "gempa terbaru",
+        "gempa di mana",
+        "info gempa"
+      ],
+      "pendukung": [
+        "tadi",
+        "baru aja"
+      ]
+    },
+    {
+      "id": "INT-33",
+      "tag": "prediksi",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "kapan gempa",
+        "kapan banjir",
+        "akan terjadi kapan",
+        "prediksi",
+        "ramalan",
+        "bisa diprediksi",
+        "besok bakal"
+      ],
+      "pendukung": [
+        "besok",
+        "minggu depan"
+      ]
+    },
+    {
+      "id": "INT-91",
+      "tag": "lanjutan",
+      "prioritas": 2,
+      "entity_wajib": [],
+      "kuat": [
+        "yang tadi",
+        "lanjut",
+        "gimana dengan",
+        "bagaimana dengan"
+      ],
+      "pendukung": [
+        "kalau",
+        "terus",
+        "lalu"
+      ]
+    },
+    {
+      "id": "INT-92",
+      "tag": "di_luar_topik",
+      "prioritas": 1,
+      "entity_wajib": [],
+      "kuat": [
+        "resep",
+        "film",
+        "lagu",
+        "presiden",
+        "bola",
+        "cuaca besok"
+      ],
+      "pendukung": [
+        "masak",
+        "nonton"
+      ]
+    }
+  ]
+}

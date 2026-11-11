@@ -1,0 +1,853 @@
+{
+  "versi": "2.0.0",
+  "responses": [
+    {
+      "id": "RSP-E1",
+      "intent": "darurat_aktif",
+      "entity": {},
+      "teks": "**DARURAT — UTAMAKAN KESELAMATAN DIRI SEKARANG!**\n1. Lindungi kepala jika gempa, atau segera naik ke tempat tinggi jika banjir/longsor.\n2. Segera hubungi nomor darurat **112** atau Basarnas **115** sekarang juga.\n3. Aku adalah bot otomatis dan tidak bisa mengirim bantuan langsung ke lokasimu.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "Basarnas", "url": "https://basarnas.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_saat:gempa", "info_saat:banjir", "info_saat:longsor"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-E1-G",
+      "intent": "darurat_aktif",
+      "entity": {"bencana": "gempa"},
+      "teks": "**DARURAT GEMPA — LAKUKAN SEKARANG!**\n1. Merunduk, lindungi kepala/leher di bawah meja kokoh, dan jauhi kaca atau benda berat.\n2. Jangan gunakan lift; keluar ke area terbuka setelah guncangan berhenti.\n3. Segera hubungi nomor darurat **112** atau Basarnas **115** bila terjebak atau ada korban.\n4. Aku adalah bot otomatis dan tidak bisa mengirim bantuan langsung ke lokasimu.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_sesudah:gempa"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-E1-B",
+      "intent": "darurat_aktif",
+      "entity": {"bencana": "banjir"},
+      "teks": "**DARURAT BANJIR — LAKUKAN SEKARANG!**\n1. Segera naik ke tempat lebih tinggi/lantai atas dan jauhi kabel atau gardu listrik.\n2. Jangan menerobos arus air yang deras.\n3. Segera hubungi nomor darurat **112** atau Basarnas **115** sekarang juga.\n4. Aku adalah bot otomatis dan tidak bisa mengirim bantuan langsung ke lokasimu.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_saat:banjir"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-E1-L",
+      "intent": "darurat_aktif",
+      "entity": {"bencana": "longsor"},
+      "teks": "**DARURAT LONGSOR — LAKUKAN SEKARANG!**\n1. Segera menjauh ke arah samping dari jalur longsoran menuju tanah tinggi yang stabil.\n2. Jangan masuk ke area tanah labil untuk menggali sendirian karena rawan longsor susulan.\n3. Segera hubungi nomor darurat **112** atau Basarnas **115** sekarang juga.\n4. Aku adalah bot otomatis dan tidak bisa mengirim bantuan langsung ke lokasimu.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_saat:longsor"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G1",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "gempa"},
+      "teks": "**Persiapan Sebelum Gempa Bumi:**\n1. Kenali bagian ruangan yang kokoh untuk berlindung (seperti kolong meja kuat) dan jalur keluar terdekat.\n2. Tata perabot berat (lemari, rak) agar menempel kuat ke dinding dan letakkan benda berat di bagian bawah.\n3. Siapkan **tas siaga bencana** dan simpan di tempat yang mudah dijangkau dekat pintu keluar.\n4. Sepakati **titik kumpul darurat** bersama keluarga atau teman satu kos.\n5. Ikuti simulasi evakuasi bencana secara berkala di rumah, sekolah, kampus, atau kantor.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB (Buku Saku Tanggap Tangkas Tangguh)", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["tas_siaga", "info_saat:gempa", "jalur_evakuasi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G2",
+      "intent": "info_saat",
+      "entity": {"bencana": "gempa"},
+      "teks": "**Saat Terjadi Gempa Bumi:**\n1. **Merunduk, lindungi kepala, dan bertahan:** Berlindung di bawah meja kokoh atau dekat struktur bangunan yang kuat sambil melindungi kepala dan leher.\n2. **Jauhi kaca**, jendela, lemari, lampu gantung, dan benda yang berisiko jatuh.\n3. **Jangan gunakan lift** saat berada di gedung bertingkat.\n4. Jangan berlari panik keluar gedung selama guncangan masih berlangsung.\n5. Jika berada di luar ruangan, menjauhlah dari bangunan, tiang listrik, papan reklame, dan pohon.\n\nDarurat: segera hubungi **112** atau Basarnas **115**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_sesudah:gempa", "situasi_khusus:gempa:kendaraan"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G3",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "gempa"},
+      "teks": "**Langkah Sesudah Gempa Bumi Reda:**\n1. Periksa kondisi diri sendiri dan orang sekitar; berikan pertolongan pertama dasar bila ada yang terluka.\n2. Waspadai **gempa susulan**; keluar dari bangunan dengan tenang melalui tangga darurat dan jangan masuk kembali bila bangunan retak atau rusak.\n3. Periksa kebocoran gas dan instalasi listrik; jika tercium bau gas, segera buka jendela dan jangan nyalakan api atau saklar listrik.\n4. Gunakan alas kaki saat berjalan untuk menghindari pecahan kaca dan puing tajam.\n5. Ikuti informasi resmi dari **BMKG, BNPB, dan BPBD**, serta segera menuju tempat tinggi bila berada di pesisir dan guncangan terasa kuat atau lama.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["sumber_resmi", "kontak_darurat", "info_sebelum:gempa"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G4",
+      "intent": "tanda_peringatan",
+      "entity": {"bencana": "gempa"},
+      "teks": "**Tanda Peringatan Gempa Bumi:**\n1. **Penting diketahui:** Hingga saat ini gempa bumi **tidak dapat diprediksi** waktu, lokasi, maupun kekuatannya secara pasti oleh teknologi mana pun.\n2. Perilaku hewan atau kondisi cuaca panas **bukan** tanda ilmiah yang dapat dijadikan patokan pasti terjadinya gempa.\n3. Hal yang dapat dikenali sebelumnya adalah **kerentanan lingkungan**, seperti tinggal di zona sesar aktif/rawan gempa atau kondisi struktur bangunan yang rapuh.\n4. Jika berada di pantai dan merasakan guncangan gempa yang kuat/lama (> 20 detik) disertai air laut surut mendadak, itu adalah **tanda peringatan tsunami** — segera evakuasi ke tempat tinggi.\n\nPantau informasi resmi hanya dari **BMKG** dan hubungi **112** saat darurat.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["mitos_hoaks", "sumber_resmi", "info_sebelum:gempa"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G5",
+      "intent": "penyebab",
+      "entity": {"bencana": "gempa"},
+      "teks": "**Penyebab Terjadinya Gempa Bumi:**\n1. **Gempa Tektonik:** Pergeseran tiba-tiba lempeng tektonik bumi atau patahan (sesar) aktif akibat pelepasan energi yang terakumulasi di kerak bumi.\n2. **Gempa Vulkanik:** Aktivitas pergerakan magma di dalam gunung berapi menjelang atau saat erupsi.\n3. **Gempa Runtuhan:** Runtuhnya gua bawah tanah, tebing besar, atau lereng tambang.\n\nIndonesia memiliki potensi gempa tinggi karena berada di pertemuan lempeng Indo-Australia, Eurasia, dan Pasifik. Dalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_sebelum:gempa", "info_saat:gempa", "definisi_istilah:megathrust"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6a",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "kendaraan"},
+      "teks": "**Saat Gempa di Dalam Kendaraan (Mobil/Motor):**\n1. Kurangi kecepatan dan **menepi perlahan** ke tempat terbuka yang jauh dari jembatan, jalan layang (flyover), pohon, papan reklame, dan tiang listrik.\n2. Hentikan kendaraan, tarik rem tangan, dan **tetap berada di dalam mobil** sampai guncangan reda.\n3. Jika mengendarai motor, berhenti di tempat terbuka yang aman, turun dari motor, dan lindungi kepala.\n4. Setelah guncangan berhenti, lanjutkan perjalanan dengan hati-hati sambil mewaspadai jalan retak atau longsor.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sesudah:gempa", "situasi_khusus:gempa:gedung_tinggi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6b",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "gedung_tinggi"},
+      "teks": "**Saat Gempa di Gedung Bertingkat atau Lift:**\n1. **Jangan gunakan lift.** Berlindunglah di bawah meja kokoh atau dekat pilar bangunan sambil melindungi kepala hingga guncangan reda.\n2. Jauhi jendela kaca luar dan partisi yang mudah pecah atau roboh.\n3. Setelah guncangan berhenti, keluar dengan tertib melalui **tangga darurat** menuju titik kumpul.\n4. **Jika sedang terjebak di dalam lift:** Tekan semua tombol lantai, tekan tombol interkom/darurat lift, tetap tenang, dan tunggu bantuan petugas.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sesudah:gempa", "jalur_evakuasi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6c",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "sekolah_kampus"},
+      "teks": "**Saat Gempa di Sekolah, Kampus, atau Kos:**\n1. Berlindung di bawah meja belajar/kerja yang kokoh dan lindungi kepala dengan tas atau kedua tangan.\n2. Jauhi jendela kaca, rak buku tinggi, dan peralatan laboratorium.\n3. Jangan berebut keluar pintu saat guncangan masih kuat.\n4. Setelah guncangan reda, lakukan evakuasi dengan tertib (jangan berlari/mendorong) menuju **Titik Kumpul** terbuka.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["jalur_evakuasi", "tas_siaga", "info_sesudah:gempa"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6d",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "pesisir"},
+      "teks": "**Saat Gempa di Wilayah Pesisir / Pantai:**\n1. Lindungi diri selama guncangan berlangsung dan jauhi bangunan atau pohon kelapa.\n2. **Aturan 20-20-20:** Jika gempa berlangsung lebih dari **20 detik**, Anda punya waktu sekitar **20 menit** untuk segera evakuasi ke tempat dengan ketinggian minimal **20 meter**.\n3. **Jangan menunggu sirene** peringatan tsunami atau melihat air laut surut — segera lari ke dataran tinggi atau gedung shelter tsunami.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["jalur_evakuasi", "sumber_resmi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6e",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "luar_ruangan"},
+      "teks": "**Saat Gempa di Luar Ruangan / Tempat Terbuka:**\n1. Menjauhlah segera dari bangunan, tembok tinggi, tiang listrik, papan reklame, dan pepohonan.\n2. Berjongkok di area terbuka yang aman dan lindungi kepala dengan kedua tangan.\n3. Tetap berada di area terbuka sampai guncangan benar-benar berhenti.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sesudah:gempa", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6f",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "rumah"},
+      "teks": "**Saat Gempa di Dalam Rumah:**\n1. Merunduk di bawah meja makan/kerja yang kokoh dan lindungi kepala dengan bantal atau lengan.\n2. Jika sedang memasak di dapur, segera matikan kompor bila masih terjangkau, lalu menjauh dari rak piring atau lemari kaca.\n3. Jika sedang di tempat tidur, tetap di atas kasur dan lindungi kepala dengan bantal tebal.\n4. Keluar menuju halaman/titik kumpul setelah guncangan berhenti sambil membawa tas siaga.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sesudah:gempa", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-G6g",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "gempa", "situasi": "lereng_gunung"},
+      "teks": "**Saat Gempa di Gunung / Lereng Bukit:**\n1. Jauhi tebing curam dan lereng berbatu karena guncangan gempa sangat rawan memicu runtuhan batu dan tanah longsor.\n2. Cari area punggungan atau lapangan yang datar, terbuka, dan jauh dari pepohonan besar.\n3. Berjongkok dan lindungi kepala hingga guncangan berhenti, lalu turun melalui jalur aman.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:longsor", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B1",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "banjir"},
+      "teks": "**Persiapan Sebelum Banjir:**\n1. Pantau informasi prakiraan cuaca dan peringatan dini dari **BMKG** serta **BPBD** setempat.\n2. Kenali jalur evakuasi dan lokasi dataran yang lebih tinggi di sekitar tempat tinggal.\n3. Simpan dokumen penting (KTP, KK, ijazah, surat berharga) di dalam wadah kedap air dan letakkan di tempat tinggi.\n4. Siapkan **tas siaga bencana** dan catat nomor kontak darurat penting.\n5. Bersihkan saluran air/selokan secara rutin dan jangan membuang sampah ke sungai.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["tas_siaga", "info_saat:banjir", "jalur_evakuasi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B2",
+      "intent": "info_saat",
+      "entity": {"bencana": "banjir"},
+      "teks": "**Saat Terjadi Banjir:**\n1. **Matikan aliran listrik** dari meteran utama (MCB) dan cabut regulator gas jika kondisi masih aman.\n2. Segera pindah atau mengungsi ke tempat yang lebih tinggi; jangan menunggu air semakin naik.\n3. **Jangan berjalan atau berkendara** menembus arus air banjir.\n4. Jauhi kabel listrik, gardu, dan tiang listrik yang tergenang air.\n5. Hubungi nomor darurat **112**, Basarnas **115**, atau BPBD setempat apabila terjebak.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_sesudah:banjir", "situasi_khusus:banjir:kendaraan"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B3",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "banjir"},
+      "teks": "**Langkah Sesudah Banjir Surut:**\n1. Pastikan area sekitar sudah aman dan air benar-benar surut sebelum kembali masuk ke rumah.\n2. **Jangan menyalakan listrik** sebelum seluruh instalasi kabel kering dan diperiksa keamanannya.\n3. Gunakan **sarung tangan dan sepatu bot/alas kaki** saat membersihkan lumpur karena air banjir mengandung kuman dan benda tajam.\n4. Buang bahan makanan yang terendam banjir; pastikan air sumur dijernihkan/dimasak hingga mendidih atau gunakan air kemasan yang aman untuk minum.\n5. Segera periksa ke fasilitas kesehatan bila muncul gejala demam, diare, atau gatal-gatal.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "Kemenkes RI", "url": "https://www.kemkes.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_sebelum:banjir", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B4",
+      "intent": "tanda_peringatan",
+      "entity": {"bencana": "banjir"},
+      "teks": "**Tanda Peringatan Banjir & Banjir Bandang:**\n1. Hujan deras turun berkepanjangan selama beberapa jam di wilayah Anda atau di daerah hulu.\n2. Permukaan air sungai atau saluran drainase naik dengan cepat.\n3. **Tanda khusus banjir bandang:** Air sungai mendadak berubah sangat keruh bercampur lumpur pekat, ranting kayu, dan dedaunan, atau terdengar suara gemuruh dari arah hulu sungai.\n4. Adanya peringatan dini cuaca ekstrem atau kenaikan status pintu air dari **BMKG / BPBD**.\n\nJika tanda ini muncul, segera siapkan tas siaga dan evakuasi lebih awal. Darurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_saat:banjir", "tas_siaga", "jalur_evakuasi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B5",
+      "intent": "penyebab",
+      "entity": {"bencana": "banjir"},
+      "teks": "**Penyebab Terjadinya Banjir:**\n1. Curah hujan ekstrem yang melebihi kapasitas tampung sungai dan saluran drainase.\n2. Pendangkalan sungai serta penyumbatan saluran air akibat tumpukan sampah.\n3. Berkurangnya daerah resapan air di hulu dan perkotaan akibat alih fungsi lahan.\n4. Rob (pasang air laut tinggi) di kawasan pesisir atau jebolnya tanggul penahan air.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sebelum:banjir", "info_saat:banjir"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B6a",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "banjir", "situasi": "kendaraan"},
+      "teks": "**Saat Banjir di Dalam Kendaraan:**\n1. **Jangan menerobos genangan banjir**, terutama jika tinggi air sudah melewati setengah roda atau arus terlihat deras (arus setinggi 30–60 cm dapat menyeret mobil).\n2. Putar balik dan cari rute alternatif di jalan yang lebih tinggi.\n3. Jika mesin mobil mati dan air terus naik dengan cepat, segera buka sabuk pengaman, keluar dari kendaraan, dan pindah ke tempat yang lebih tinggi.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:banjir", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B6b",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "banjir", "situasi": "rumah"},
+      "teks": "**Saat Banjir di Rumah / Rumah Bertingkat:**\n1. Matikan segera meteran listrik utama (MCB) dan lepaskan regulator tabung gas.\n2. Pindahkan dokumen penting dan barang elektronik ke lantai atas atau tempat tinggi.\n3. Bawa **tas siaga bencana** dan naik ke lantai dua (evakuasi vertikal) atau mengungsi ke posko evakuasi sebelum air makin tinggi.\n4. Jangan bertahan di plafon/loteng tertutup tanpa akses keluar.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_sesudah:banjir", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-B6c",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "banjir", "situasi": "lereng_gunung"},
+      "teks": "**Saat Banjir di Dekat Aliran Sungai / Lereng:**\n1. Segera menjauh dari bantaran sungai menuju dataran tinggi untuk menghindari terjangan **banjir bandang**.\n2. Jangan menyeberangi jembatan kecil yang airnya sudah menyentuh badan jembatan.\n3. Waspadai material kayu atau batu yang terbawa arus dari hulu.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tanda_peringatan:banjir", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L1",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "longsor"},
+      "teks": "**Persiapan Sebelum Tanah Longsor:**\n1. Kenali apakah tempat tinggal berada di lereng curam atau dekat tebing melalui peta rawan bencana **BPBD / PVMBG**.\n2. Jangan memotong tebing secara tegak lurus atau menebang pohon penguat tanah di lereng curam.\n3. Pastikan saluran air permukaan lancar dan tidak merembes masuk ke dalam tanah lereng.\n4. Tingkatkan kewaspadaan dan pantau retakan tanah saat hujan deras turun berhari-hari.\n5. Siapkan tas siaga serta jalur dan tempat evakuasi yang aman di luar zona luncuran lereng.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"}
+      ],
+      "tombol": ["tanda_peringatan:longsor", "info_saat:longsor", "tas_siaga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L2",
+      "intent": "info_saat",
+      "entity": {"bencana": "longsor"},
+      "teks": "**Saat Terjadi Tanah Longsor:**\n1. Segera **menjauh dari arah luncuran longsor**, bergerak cepat ke **arah samping (tegak lurus)** jalur longsoran menuju tanah yang tinggi dan stabil.\n2. **Jangan berlari menuju lembah** atau searah dengan alur aliran material tanah.\n3. Jika terjebak di dalam bangunan dan tidak sempat keluar, meringkuk seperti bola, lindungi kepala, dan cari bagian ruangan yang paling kuat.\n4. Hubungi nomor darurat **112**, Basarnas **115**, atau BPBD setempat.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "info_sesudah:longsor", "situasi_khusus:longsor:lereng_gunung"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L3",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "longsor"},
+      "teks": "**Langkah Sesudah Tanah Longsor:**\n1. **Jauhi area longsoran** karena kondisi tanah masih labil dan sangat berisiko terjadi **longsor susulan**.\n2. **Jangan masuk ke area tidak stabil** untuk mencari atau menggali korban sendirian; segera laporkan lokasi korban kepada tim **SAR (115)** atau **112**.\n3. Periksa dan laporkan kerusakan jalur pipa air, tiang listrik, atau gas di sekitar lokasi kepada petugas.\n4. Waspadai potensi **banjir bandang** apabila material longsor membendung aliran sungai di bagian hulu.\n\nDarurat: hubungi **112** atau **115**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "tanda_peringatan:longsor", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L4",
+      "intent": "tanda_peringatan",
+      "entity": {"bencana": "longsor"},
+      "teks": "**Tanda Peringatan Alam Sebelum Tanah Longsor:**\n1. Muncul **retakan baru** yang memanjang di permukaan tanah lereng, halaman, jalan, atau dinding bangunan.\n2. Pohon, pagar, atau tiang listrik di lereng tampak **miring** ke arah bawah.\n3. Air sumur atau mata air di sekitar lereng **mendadak keruh**, atau muncul rembesan mata air baru di kaki tebing.\n4. Pintu dan jendela rumah terasa macet/sulit ditutup akibat pergeseran pondasi tanah.\n5. Terbuai kerikil berjatuhan atau terdengar **suara gemuruh** dari atas lereng saat atau seusai hujan deras.\n\nJika tanda ini terlihat, segera evakuasi ke tempat aman dan hubungi **112** atau BPBD.",
+      "sumber": [
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:longsor", "jalur_evakuasi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L5",
+      "intent": "penyebab",
+      "entity": {"bencana": "longsor"},
+      "teks": "**Penyebab Terjadinya Tanah Longsor:**\n1. **Hujan deras berkepanjangan** yang membuat air meresap ke pori-pori tanah lereng hingga tanah jenuh air, berat, dan licin.\n2. Kemiringan lereng yang curam dengan lapisan tanah pelapukan tebal di atas batuan kedap air.\n3. Guncangan gempa bumi atau getaran kuat yang meruntuhkan kestabilan lereng.\n4. Penggundulan vegetasi/pohon berakar kuat serta pemotongan tebing tanpa dinding penahan tanah.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"}
+      ],
+      "tombol": ["tanda_peringatan:longsor", "info_sebelum:longsor"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L6a",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "longsor", "situasi": "lereng_gunung"},
+      "teks": "**Saat Longsor di Jalan Lereng, Gunung, atau Area Pendakian/Camping:**\n1. Cepat bergerak **ke arah samping** menjauhi alur lembah/jalur longsoran menuju punggungan bukit atau tanah yang stabil.\n2. **Jangan mendirikan tenda atau berhenti** di bawah tebing curam maupun di dekat alur sungai gunung saat hujan deras.\n3. Waspadai batu menggelinding dari atas tebing dan segera turun/evakuasi bila hujan lebat tidak berhenti.\n\nDarurat: hubungi **112** atau Basarnas **115**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tanda_peringatan:longsor", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L6b",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "longsor", "situasi": "rumah"},
+      "teks": "**Saat Rawan Longsor di Rumah Dekat Lereng:**\n1. Lakukan **evakuasi mandiri lebih awal** ke tempat aman atau rumah kerabat saat hujan deras turun terus-menerus lebih dari 2 jam, terutama pada malam hari.\n2. Matikan listrik dan gas sebelum meninggalkan rumah bersama tas siaga.\n3. Jika longsor terjadi tiba-tiba dan tidak sempat keluar rumah, berlindung di bagian bangunan yang paling jauh dari sisi tebing.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:longsor", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-L6c",
+      "intent": "situasi_khusus",
+      "entity": {"bencana": "longsor", "situasi": "kendaraan"},
+      "teks": "**Saat Longsor di Jalan Raya / Di Dalam Kendaraan:**\n1. Jangan memaksakan melintas di jalur perbukitan/tebing saat hujan sangat lebat atau terlihat guguran batu kecil.\n2. Segera menepi di area yang lapang dan jauh dari tebing curam maupun jurang.\n3. Jika jalan tertutup material longsor, putar balik dan laporkan ke petugas atau hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:longsor", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-T0",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "tsunami"},
+      "teks": "**Persiapan Sebelum Tsunami (Bagi Warga/Wisatawan Pesisir):**\n1. Kenali peta bahaya tsunami, rambu jalur evakuasi, dan lokasi bukit atau gedung shelter (**TES**) terdekat dari pantai.\n2. Ingat prinsip **20-20-20**: gempa > 20 detik di pantai = waktu evakuasi ±20 menit ke ketinggian > 20 meter.\n3. Siapkan tas siaga bencana dan pasang aplikasi **InfoBMKG**.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:tsunami", "jalur_evakuasi", "tas_siaga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-T1",
+      "intent": "info_saat",
+      "entity": {"bencana": "tsunami"},
+      "teks": "**Saat Peringatan atau Ancaman Tsunami:**\n1. Jika merasakan gempa kuat di pesisir (> 20 detik) atau melihat air laut surut mendadak, **segera lari ke dataran tinggi** (minimal ketinggian 20 meter).\n2. Jika tidak sempat menjauh dari pantai, lakukan **evakuasi vertikal** ke lantai atas gedung bertingkat yang kokoh.\n3. Jauhi pantai, muara sungai, dan jembatan.\n4. Tetap di tempat tinggi hingga **BMKG** menyatakan peringatan dini tsunami telah berakhir.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["jalur_evakuasi", "kontak_darurat", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-T2",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "tsunami"},
+      "teks": "**Langkah Sesudah Tsunami:**\n1. Jangan turun kembali ke area pantai sebelum pengumuman resmi **BMKG/BPBD** karena gelombang tsunami berikutnya sering lebih besar.\n2. Jauhi bangunan rusak, genangan air yang berdekatan dengan kabel listrik putus, serta puing tajam.\n3. Cari pertolongan medis untuk korban luka dan hubungi **112** atau Basarnas **115**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-V0",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "gunung_api"},
+      "teks": "**Persiapan Sebelum Erupsi Gunung Api:**\n1. Pantau tingkat aktivitas gunung api (Normal, Waspada, Siaga, Awas) melalui kanal resmi **PVMBG (MAGMA Indonesia)**.\n2. Siapkan masker N95, kacamata pelindung abu vulkanik, dan tas siaga bencana.\n3. Kenali jalur evakuasi dan lokasi pos pengungsian di luar kawasan rawan bencana (KRB).\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:gunung_api", "definisi_istilah:status_gunung_api", "tas_siaga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-V1",
+      "intent": "info_saat",
+      "entity": {"bencana": "gunung_api"},
+      "teks": "**Saat Erupsi Gunung Api:**\n1. Patuhi radius bahaya (Zona Merah) sesuai rekomendasi **PVMBG** dan segera mengungsi bila status naik ke **Siaga/Awas**.\n2. Jauhi lembah dan aliran sungai yang berhulu di puncak gunung untuk menghindari **awan panas** dan **banjir lahar**.\n3. Gunakan **masker (N95/kain basah)** dan kacamata pelindung untuk melindungi pernapasan serta mata dari abu vulkanik.\n4. Tutup ventilasi rumah dan sumber air bersih agar tidak tercemar abu.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["definisi_istilah:status_gunung_api", "kontak_darurat", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-V2",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "gunung_api"},
+      "teks": "**Langkah Sesudah Erupsi Gunung Api:**\n1. Bersihkan tumpukan abu vulkanik tebal di atap rumah dengan hati-hati (gunakan masker & kacamata) agar atap tidak roboh.\n2. Waspadai bahaya **banjir lahar dingin** di sungai berhulu gunung api saat turun hujan.\n3. Kembali ke rumah hanya setelah status gunung api diturunkan dan dinyatakan aman oleh **PVMBG/BPBD**.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["sumber_resmi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-A0",
+      "intent": "info_sebelum",
+      "entity": {"bencana": "angin_kencang"},
+      "teks": "**Persiapan Sebelum Angin Kencang / Puting Beliung:**\n1. Pangkas dahan pohon besar yang rapuh atau terlalu dekat dengan atap rumah dan kabel listrik.\n2. Periksa dan perkuat sambungan atap rumah (genteng/seng) yang longgar.\n3. Pantau peringatan dini cuaca ekstrem dari **BMKG**.\n\nDalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_saat:angin_kencang", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-A1",
+      "intent": "info_saat",
+      "entity": {"bencana": "angin_kencang"},
+      "teks": "**Saat Terjadi Angin Kencang / Puting Beliung:**\n1. Segera masuk ke dalam bangunan permanen yang kokoh; tutup dan kunci pintu serta jendela.\n2. Jauhi jendela kaca dan matikan aliran listrik bila atap mulai terguncang.\n3. Jika sedang di luar ruangan atau di jalan, **jauhi pohon besar, papan reklame, tiang listrik**, dan bangunan semi-permanen.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-A2",
+      "intent": "info_sesudah",
+      "entity": {"bencana": "angin_kencang"},
+      "teks": "**Langkah Sesudah Angin Kencang / Puting Beliung:**\n1. Periksa kondisi anggota keluarga dan kerusakan atap atau struktur rumah dengan hati-hati.\n2. Jauhi kabel listrik yang putus atau pohon tumbang yang menimpa jaringan listrik; laporkan ke **PLN (123)** atau **BPBD/112**.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kontak_darurat", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-KR-ANAK",
+      "intent": "kelompok_rentan",
+      "entity": {"kelompok": "anak_bayi"},
+      "teks": "**Panduan Kesiapsiagaan untuk Anak & Bayi:**\n1. **Isi Tas Siaga Khusus Bayi/Anak:** Susu formula/MPASI siap saji, botol minum bersih, popok sekali pakai (minimal untuk 3 hari), tisu basah, selimut hangat, pakaian ganti, obat penurun panas anak, dan kartu imunisasi/identitas anak.\n2. **Saat Evakuasi:** Gunakan gendongan depan (baby carrier) agar kedua tangan orang tua tetap bebas memegang pegangan tangga atau melindungi kepala.\n3. Ajari anak usia sekolah mengenali **nama lengkap orang tua, nomor telepon darurat**, serta lokasi titik kumpul.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tas_siaga", "rencana_keluarga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-KR-LANSIA",
+      "intent": "kelompok_rentan",
+      "entity": {"kelompok": "lansia"},
+      "teks": "**Panduan Kesiapsiagaan untuk Lansia:**\n1. Siapkan cadangan **obat rutin harian** (hipertensi, diabetes, jantung, asma) minimal untuk 7 hari beserta catatan dosis dokter di dalam tas siaga.\n2. Letakkan alat bantu jalan (tongkat, kacamata, alat bantu dengar) tepat di samping tempat tidur.\n3. Tentukan satu anggota keluarga/tetangga pendamping yang bertanggung jawab membantu lansia saat evakuasi.\n4. Lakukan evakuasi lebih awal bila ada peringatan banjir atau longsor.\n\nDarurat: hubungi **112** atau Ambulans **119**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tas_siaga", "rencana_keluarga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-KR-DIFABEL",
+      "intent": "kelompok_rentan",
+      "entity": {"kelompok": "difabel"},
+      "teks": "**Panduan Kesiapsiagaan untuk Penyandang Disabilitas / Pengguna Kursi Roda:**\n1. **Saat Gempa di Kursi Roda:** Kunci roda kursi (**lock**), tetap duduk, membungkuk, dan lindungi kepala serta leher dengan buku tebal, bantal, atau kedua lengan (**Lock, Cover, Hold On**).\n2. Pastikan jalur keluar rumah bebas hambatan dan memiliki bidang miring (ramp) yang aman.\n3. Simpan peluit di kursi roda atau kalungkan agar mudah memberi tanda posisi kepada penyelamat.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB (Panduan Disabilitas dalam Kebencanaan)", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["jalur_evakuasi", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-KR-HAMIL",
+      "intent": "kelompok_rentan",
+      "entity": {"kelompok": "ibu_hamil"},
+      "teks": "**Panduan Kesiapsiagaan untuk Ibu Hamil:**\n1. Simpan **Buku KIA (Kesehatan Ibu dan Anak)**, vitamin/obat kehamilan, pakaian longgar, dan perlengkapan persalinan darurat di dalam tas siaga.\n2. Saat terjadi gempa, lindungi bagian perut dan kepala dengan memiringkan badan atau berlindung di bawah meja kokoh.\n3. Saat ancaman banjir/longsor, prioritaskan ibu hamil untuk dievakuasi lebih dulu ke pos kesehatan atau tempat aman.\n\nDarurat medis: hubungi **119** atau **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "Kemenkes RI", "url": "https://www.kemkes.go.id"}
+      ],
+      "tombol": ["tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-KR-HEWAN",
+      "intent": "kelompok_rentan",
+      "entity": {"kelompok": "hewan_peliharaan"},
+      "teks": "**Panduan Kesiapsiagaan untuk Hewan Peliharaan:**\n1. Siapkan kandang lipat/tas angkut (pet carrier), tali tuntun, kalung identitas, serta cadangan pakan dan air minum untuk 3 hari.\n2. Jangan mengikat atau mengurung hewan peliharaan saat meninggalkan rumah untuk evakuasi banjir.\n3. Utamakan keselamatan jiwa manusia terlebih dahulu, lalu bawa hewan peliharaan dengan aman ke titik kumpul.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tas_siaga", "rencana_keluarga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U1",
+      "intent": "sapaan",
+      "entity": {},
+      "teks": "Halo, saya SIGAP, asisten kesiapsiagaan bencana. Saya dapat membantu memberikan informasi langkah keselamatan sebelum, saat, dan sesudah bencana gempa bumi, banjir, dan tanah longsor, panduan isi tas siaga, jalur evakuasi, serta kontak darurat. Silakan ketik pertanyaan Anda di kolom bawah. Dalam keadaan darurat, segera hubungi 112.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_saat:gempa", "info_saat:banjir", "info_saat:longsor", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U2",
+      "intent": "perkenalan",
+      "entity": {},
+      "teks": "**Tentang SIGAP (Sistem Informasi Gawat Darurat dan Antisipasi Penanggulangan):**\nAku adalah asisten edukasi kesiapsiagaan bencana berbasis aturan (rule-based) yang merujuk pada panduan resmi **BNPB, BMKG, dan PVMBG**.\n\n**Batasan Penting:**\n1. Aku **bukan** alat prediksi waktu terjadinya bencana.\n2. Aku **bukan** pengganti tim SAR/petugas darurat dan tidak dapat mengirim bantuan ke lokasimu.\n\nDalam keadaan darurat, segera hubungi **112** atau Basarnas **115**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["menu_bantuan", "tas_siaga", "sumber_resmi", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U3",
+      "intent": "terima_kasih",
+      "entity": {},
+      "teks": "Sama-sama! Semoga informasinya bermanfaat. Tetap tenang dan selalu siaga ya. Jika butuh bantuan darurat kapan pun, ingat nomor **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["menu_bantuan", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U3-PAMIT",
+      "intent": "pamit",
+      "entity": {},
+      "teks": "Sampai jumpa! Semoga sehat dan aman selalu. Tetap tenang dan selalu siaga ya. Dalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["menu_bantuan", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U4",
+      "intent": "menu_bantuan",
+      "entity": {},
+      "teks": "**Menu Topik Bantuan SIGAP:**\nSilakan ketik pertanyaan langsung seperti contoh berikut:\n1. **Gempa Bumi:** sebelum gempa, saat gempa, sesudah gempa, gempa di mobil/gedung.\n2. **Banjir:** persiapan banjir, saat banjir, sesudah banjir, tanda banjir bandang.\n3. **Tanah Longsor:** tanda-tanda longsor, saat longsor, sesudah longsor.\n4. **Kesiapsiagaan:** isi tas siaga, jalur evakuasi, rencana siaga keluarga, mitos vs fakta.\n5. **Layanan Resmi:** nomor darurat (112/115) dan kanal resmi BMKG/BNPB.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_saat:gempa", "info_saat:banjir", "info_saat:longsor", "tas_siaga", "jalur_evakuasi", "mitos_hoaks", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-U5",
+      "intent": "feedback",
+      "entity": {},
+      "teks": "Terima kasih atas masukan dan saranmu! Kamu juga bisa menekan tombol **👍** atau **👎** di bawah setiap balasan untuk membantu kami meningkatkan akurasi informasi SIGAP. Dalam kondisi darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "Tim SIGAP", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["menu_bantuan", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-C1",
+      "intent": "tas_siaga",
+      "entity": {},
+      "teks": "**Daftar Isi Tas Siaga Bencana (Bertahan 3 Hari / 72 Jam):**\n1. **Dokumen penting** (KTP, KK, akta, ijazah, buku tabungan) dalam plastik/wadah kedap air.\n2. **Air minum** (minimal 2–3 liter per orang per hari) dan **makanan tahan lama** siap santap untuk 3 hari.\n3. **Kotak P3K** dan obat-obatan pribadi/rutin.\n4. **Senter** beserta baterai cadangan, **peluit** (untuk meminta pertolongan), dan **power bank**.\n5. **Pakaian ganti**, jaket/selimut darurat, masker, dan perlengkapan kebersihan dasar.\n6. **Uang tunai** secukupnya (mesin ATM mungkin mati saat bencana) dan perlengkapan khusus bayi/lansia bila ada.\n\n*Tips BNPB: Periksa masa kedaluwarsa isi tas setiap 6 bulan dan simpan di dekat pintu keluar rumah.*",
+      "sumber": [
+        {"nama": "BNPB (Panduan Tas Siaga Bencana)", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["kelompok_rentan:anak_bayi", "kelompok_rentan:lansia", "jalur_evakuasi", "rencana_keluarga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-C2",
+      "intent": "kontak_darurat",
+      "entity": {},
+      "teks": "**Nomor Telepon Darurat Nasional & Kebencanaan:**\n1. **112** — Panggilan Darurat Terpadu Nasional (bebas pulsa).\n2. **115** — **Basarnas / SAR** (Pencarian dan Pertolongan korban bencana).\n3. **117** — Pusat Informasi & Call Center **BNPB**.\n4. **119** — Ambulans & Gawat Darurat Medis Kemenkes.\n5. **113** — Pemadam Kebakaran & Penyelamatan.\n6. **123** — PLN (Laporan bahaya listrik saat banjir/gempa).\n\nSimpan juga nomor Pusdalops **BPBD** kota/kabupaten tempat tinggal Anda.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "Kemenkominfo (Layanan 112)", "url": "https://layanan112.kominfo.go.id"}
+      ],
+      "tombol": ["sumber_resmi", "tas_siaga", "jalur_evakuasi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-C3",
+      "intent": "jalur_evakuasi",
+      "entity": {},
+      "teks": "**Panduan Jalur Evakuasi & Titik Kumpul:**\n1. **Kenali Rambu Evakuasi:** Ikuti rambu petunjuk arah menuju **Titik Kumpul** terbuka atau **TES (Tempat Evakuasi Sementara)**.\n2. **Bebas Hambatan:** Pastikan lorong, pintu keluar, dan tangga di rumah/kos tidak terhalang barang besar serta mudah dibuka dalam gelap.\n3. **Titik Kumpul Aman:** Pilih area terbuka yang jauh dari gedung tinggi, tiang listrik, pohon besar, tebing curam, dan bantaran sungai.\n4. **Evakuasi Vertikal:** Saat banjir cepat atau tsunami di area padat dan tidak sempat menjauh ke bukit, naiklah ke lantai atas bangunan bertingkat yang kokoh.\n5. Buat denah evakuasi sederhana bersama keluarga atau penghuni kos.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["rencana_keluarga", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-C4",
+      "intent": "sumber_resmi",
+      "entity": {},
+      "teks": "**Kanal Informasi Resmi Kebencanaan di Indonesia:**\n1. **BMKG (Badan Meteorologi, Klimatologi, dan Geofisika):** Situs `bmkg.go.id` dan aplikasi **InfoBMKG** untuk informasi gempa bumi terkini, cuaca ekstrem, dan peringatan dini tsunami.\n2. **BNPB & BPBD:** Situs `bnpb.go.id` dan aplikasi **inaRISK Personal** untuk panduan kesiapsiagaan dan peta bahaya bencana di lokasi Anda.\n3. **PVMBG / Badan Geologi:** Situs `magma.esdm.go.id` dan aplikasi **MAGMA Indonesia** untuk status gunung api serta potensi gerakan tanah/longsor.\n\nSelalu cek sumber resmi di atas dan jangan mudah percaya pesan berantai di media sosial. Darurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"},
+        {"nama": "PVMBG", "url": "https://magma.esdm.go.id"}
+      ],
+      "tombol": ["cek_gempa_terbaru", "mitos_hoaks", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-C5",
+      "intent": "rencana_keluarga",
+      "entity": {},
+      "teks": "**Menyusun Rencana Siaga Keluarga / Penghuni Kos:**\n1. **Sepakati Titik Kumpul:** Tentukan 2 titik temu (satu di dekat rumah/kos saat gempa, satu di luar lingkungan bila area harus dikosongkan).\n2. **Kontak Darurat Luar Kota:** Tunjuk satu kerabat di luar kota sebagai penghubung komunikasi jika anggota keluarga terpisah.\n3. **Pembagian Tugas:** Tentukan siapa yang membawa tas siaga, mematikan listrik/gas, dan mendampingi anak/lansia.\n4. **Latihan Rutin (Drill):** Lakukan simulasi merunduk-lindungi kepala dan berjalan cepat ke titik kumpul minimal 2 kali setahun.\n\nDarurat: hubungi **112**.",
+      "sumber": [
+        {"nama": "BNPB (Keluarga Tangguh Bencana)", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tas_siaga", "jalur_evakuasi", "kelompok_rentan:anak_bayi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-M1",
+      "intent": "mitos_hoaks",
+      "entity": {},
+      "teks": "**Fakta vs Mitos / Hoaks Kebencanaan:**\n1. **Klaim \"Gempa besar bisa diprediksi tanggal dan jamnya\": HOAKS.** Hingga kini belum ada teknologi atau ilmuwan di dunia yang mampu memprediksi waktu pasti terjadinya gempa.\n2. **Klaim \"Berdiri di bawah kusen pintu paling aman saat gempa\": PANDUAN USANG.** Kusen pintu pada bangunan modern tidak lebih kuat dari bagian lain dan daun pintu bisa menghantam tubuh. Panduan resmi terkini adalah **Merunduk, Lindungi Kepala, dan Bertahan** di bawah meja kokoh.\n3. **Klaim \"Hewan gelisah adalah tanda pasti gempa akan terjadi\": TIDAK TERBUKTI.** Perilaku hewan dipengaruhi banyak faktor dan tidak dapat dijadikan dasar keputusan evakuasi resmi.\n4. **Klaim \"Cuaca panas terik atau awan lurus memicu gempa\": MITOS.** Gempa berasal dari aktivitas tektonik di dalam kerak bumi, tidak dipengaruhi cuaca atmosfer.\n\nPastikan selalu memverifikasi informasi ke **BMKG** dan **BNPB**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["sumber_resmi", "info_saat:gempa", "prediksi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-P1",
+      "intent": "prediksi",
+      "entity": {},
+      "teks": "Sampai saat ini belum ada teknologi maupun lembaga yang bisa memprediksi kapan gempa atau bencana akan terjadi secara pasti, termasuk aku. Yang paling penting dilakukan adalah bersiap sejak sekarang dan memantau peringatan dini cuaca/kebencanaan hanya dari kanal resmi **BMKG**. Mau aku bantu menyiapkan daftar **tas siaga** atau langkah persiapan bencana?",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["tas_siaga", "info_sebelum:gempa", "info_sebelum:banjir", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-P2",
+      "intent": "cek_gempa_terbaru",
+      "entity": {},
+      "teks": "Aku berjalan secara lokal dan tidak terhubung ke data real-time. Untuk mengecek kejadian gempa bumi terkini (lokasi, magnitudo, kedalaman, dan status potensi tsunami), silakan cek langsung di kanal resmi **BMKG** melalui situs **bmkg.go.id** atau aplikasi **InfoBMKG**. Dalam keadaan darurat, hubungi **112**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"}
+      ],
+      "tombol": ["info_saat:gempa", "info_sesudah:gempa", "sumber_resmi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-D0",
+      "intent": "definisi_istilah",
+      "entity": {},
+      "teks": "**Glosarium Istilah Kebencanaan SIGAP:**\nPilih atau tanyakan istilah yang ingin kamu ketahui artinya, seperti: **Magnitudo, Intensitas (MMI), Episenter, Hiposenter, Megathrust, Gempa Susulan, Early Warning, Zona Merah, Jalur Evakuasi, TES, Status Gunung Api, Tas Siaga, atau Mitigasi**.",
+      "sumber": [
+        {"nama": "BMKG", "url": "https://www.bmkg.go.id"},
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["definisi_istilah:magnitudo", "definisi_istilah:megathrust", "definisi_istilah:status_gunung_api", "definisi_istilah:mitigasi"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-F1",
+      "intent": "fallback",
+      "entity": {},
+      "teks": "Maaf, aku belum paham maksud pertanyaanmu. Coba ketik pertanyaan seputar:\n1. **Langkah sebelum, saat, atau sesudah** bencana (**gempa, banjir, atau longsor**)\n2. **Isi tas siaga bencana** atau **jalur evakuasi**\n3. **Nomor kontak darurat (112 / 115)**",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:gempa", "info_saat:banjir", "info_saat:longsor", "tas_siaga", "kontak_darurat"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    },
+    {
+      "id": "RSP-F2",
+      "intent": "di_luar_topik",
+      "entity": {},
+      "teks": "Aku khusus membahas edukasi kesiapsiagaan bencana (seperti gempa bumi, banjir, tanah longsor, tas siaga, dan kontak darurat). Ada yang mau ditanyakan seputar gempa, banjir, atau longsor?",
+      "sumber": [
+        {"nama": "BNPB", "url": "https://www.bnpb.go.id"}
+      ],
+      "tombol": ["info_saat:gempa", "info_saat:banjir", "info_saat:longsor", "tas_siaga"],
+      "diverifikasi": "2026-11-11",
+      "diverifikasi_oleh": "Tim SIGAP",
+      "kadaluarsa_tinjau": "2027-05-12"
+    }
+  ]
+}
