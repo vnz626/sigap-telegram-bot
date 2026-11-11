@@ -6,8 +6,22 @@
 
 Seluruh panduan kebencanaan merujuk pada sumber resmi **BNPB**, **BMKG**, dan **PVMBG** untuk menjawab tiga pertanyaan inti kebencanaan (**Sebelum**, **Saat**, dan **Sesudah** bencana) pada **Gempa Bumi**, **Banjir**, dan **Tanah Longsor** (serta Tsunami, Gunung Api, Angin Kencang, Tas Siaga, Jalur Evakuasi, Kelompok Rentan, Glosarium Istilah, Mitos vs Fakta, dan Kontak Darurat **112/115**).
 
+---
+
+## Tampilan Antarmuka Chatbot
+
 <p align="center">
-  <img src="web/static/sigap-preview.png" alt="Tampilan Antarmuka Chatbot SIGAP" width="100%" />
+  <img src="screenshot/Screenshot%202026-11-11%20153611.png" alt="Sapaan & Panduan Situasi Khusus Banjir di Kendaraan" width="100%" />
+</p>
+
+<p align="center">
+  <img src="screenshot/Screenshot%202026-11-11%20153630.png" alt="Panduan Jalur Evakuasi & Glosarium Kebencanaan" width="49%" />
+  <img src="screenshot/Screenshot%202026-11-11%20153646.png" alt="Klarifikasi Multi-Giliran & Panduan Sesudah Banjir" width="49%" />
+</p>
+
+<p align="center">
+  <img src="screenshot/Screenshot%202026-11-11%20153729.png" alt="Kontak Darurat & Daftar Tas Siaga Bencana" width="49%" />
+  <img src="screenshot/Screenshot%202026-11-11%20153750.png" alt="Menu Topik Bantuan & Deteksi Darurat Aktif (SOS)" width="49%" />
 </p>
 
 ---
