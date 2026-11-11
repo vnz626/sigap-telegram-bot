@@ -6,6 +6,10 @@
 
 Seluruh panduan kebencanaan merujuk pada sumber resmi **BNPB**, **BMKG**, dan **PVMBG** untuk menjawab tiga pertanyaan inti kebencanaan (**Sebelum**, **Saat**, dan **Sesudah** bencana) pada **Gempa Bumi**, **Banjir**, dan **Tanah Longsor** (serta Tsunami, Gunung Api, Angin Kencang, Tas Siaga, Jalur Evakuasi, Kelompok Rentan, Glosarium Istilah, Mitos vs Fakta, dan Kontak Darurat **112/115**).
 
+<p align="center">
+  <img src="web/static/sigap-preview.png" alt="Tampilan Antarmuka Chatbot SIGAP" width="100%" />
+</p>
+
 ---
 
 ## Fitur Utama
